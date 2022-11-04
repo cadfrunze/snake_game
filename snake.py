@@ -2,7 +2,7 @@ from turtle import Turtle
 
 # Creearea sarpelui
 STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0)]
-MOVE_DISTANCE = 20
+MOVE_DISTANCE = 15
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -16,6 +16,8 @@ class Snake:
         self.segmente = []
         self.create_snake()
         self.head = self.segmente[0]
+        self.x_cor = 0
+        self.y_cor = 0
 
     # Locul de unde porneste
 
@@ -35,6 +37,8 @@ class Snake:
             new_y = self.segmente[miscare - 1].ycor()
             self.segmente[miscare].goto(x=new_x, y=new_y)
         self.head.forward(MOVE_DISTANCE)
+        self.x_cor = self.head.xcor()
+        self.y_cor = self.head.ycor()
 
     # Directiile
 
