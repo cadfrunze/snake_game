@@ -2,11 +2,12 @@ from turtle import Turtle
 
 # Creearea sarpelui
 STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0)]
-MOVE_DISTANCE = 15
+MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
+
 
 
 class Snake:
