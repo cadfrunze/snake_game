@@ -7,7 +7,7 @@ class Food:
         self.food = Turtle('circle')
         self.food.color('blue')
         self.food.penup()
-        self.food.shapesize(0.5)
+        self.food.shapesize(0.8)
         self.x_cor = 0
         self.y_cor = 0
 
@@ -19,7 +19,7 @@ class Food:
         self.y_cor = self.food.ycor()
 
     def reseteaza(self):
-        self.food.hideturtle()
+        self.food.clear()
 
 
 
