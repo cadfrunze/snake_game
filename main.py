@@ -1,4 +1,4 @@
-from turtle import Screen
+from turtle import Screen, Turtle
 import time
 from snake import Snake
 from food import Food
@@ -31,8 +31,17 @@ while jocul:
     print(f"adevarat_x: {adevarat_x}")
     print(f"adevarat_y: {adevarat_y}")
     print(f"scorul: {afisare_scor.scor}")
-    if (adevarat_x <= 0.8 and adevarat_x >= -0.8) and (adevarat_y <= 0.8 and adevarat_y >= -0.8):
+    if (adevarat_x <= 12 and adevarat_x >= -12) and (adevarat_y <= 12 and adevarat_y >= -12):
         afisare_scor.scor += 1
+        screen.tracer()
+        new_element = Turtle('square')
+        new_element.hideturtle()
+        new_element.penup()
+        new_element.color('white')
+        sarpele.segmente.append(new_element)
+        sarpele.segmente[-1].showturtle()
+        screen.update()
+        time.sleep(0.1)
         mancarea.pozitia()
 
 
