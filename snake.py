@@ -9,11 +9,11 @@ LEFT = 180
 RIGHT = 0
 
 
-
-class Snake:
+class Snake(Turtle):
     """Sablon sarpe"""
 
     def __init__(self):
+        super().__init__()
         self.segmente = []
         self.create_snake()
         self.head = self.segmente[0]
