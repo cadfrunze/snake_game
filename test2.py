@@ -1,9 +1,4 @@
-import time
+x = ("maryus", "alina")
 
-variabila = {
-    "a": 2,
-    "b": "bla"
-}
-
-print(f"variabila este: {variabila.values()} deci asta este")
-
+print(len(x))
+print(type(x))
