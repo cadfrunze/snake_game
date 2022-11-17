@@ -27,7 +27,6 @@ while jocul:
     sarpele.move()
     # Intalnirea cu mancarea!
     if sarpele.head.distance(snake_food) < 15:
-        scorul.scor += 1
         scorul.modify_scor()
         snake_food.refresh()
 screen.exitonclick()
