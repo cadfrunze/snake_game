@@ -27,6 +27,17 @@ while jocul:
     sarpele.move()
     # Intalnirea cu mancarea!
     if sarpele.head.distance(snake_food) < 15:
+        sarpele.extented_sarpele()
         scorul.modify_scor()
         snake_food.refresh()
+    # Detect collision with wall
+    if sarpele.head.xcor() > 300 or sarpele.head.xcor() < -300 or sarpele.head.ycor() > 300 or sarpele.head.ycor() < -300:
+        jocul = False
+        scorul.game_over()
+    elif sarpele.collision() == False:
+        jocul = False
+        scorul.game_over_muscat()
+
 screen.exitonclick()
+
+
