@@ -4,6 +4,7 @@ ARANJARE = "center"
 FONT = ('Arial', 14, 'normal')
 MOVE = False
 
+
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
@@ -12,12 +13,15 @@ class Scoreboard(Turtle):
         self.penup()
         self.hideturtle()
         self.goto(x=0, y=280)
+        self.update_score()
+
+    def update_score(self):
         self.write(arg=f"Scor: {self.scor}", move=MOVE, align=ARANJARE, font=FONT)
 
     def modify_scor(self):
         self.clear()
         self.scor += 1
-        super().write(arg=f"Scor: {self.scor}", move=MOVE, align=ARANJARE, font=FONT)
+        self.update_score()
 
 
 
