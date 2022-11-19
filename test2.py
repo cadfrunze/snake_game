@@ -1,10 +1,12 @@
+x = 3
+
+print(x)
+def test2(x):
+    x = 4
 
 
-tabel = []
 
-def proba(tabel1):
-    for a in range(5):
-        tabel1.append(a)
+x = test2(x)
+print(x)
+print(type(x))
 
-proba(tabel1=tabel)
-print(tabel)
