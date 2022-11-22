@@ -43,9 +43,9 @@ class Snake(Turtle):
         self.head.forward(MOVE_DISTANCE)
         self.collision()
 
-    def collision(self, ):
-        for num_piesa in range(1, (len(self.segmente) - 1)):
-            if self.head.distance(self.segmente[num_piesa]) < 10:
+    def collision(self,):
+        for num_piesa in self.segmente[1:]:
+            if self.head.distance(num_piesa) < 10:
                 return False
 
     # Directiile
