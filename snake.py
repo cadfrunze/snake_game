@@ -46,7 +46,6 @@ class Snake(Turtle):
     def collision(self, ):
         for num_piesa in range(1, (len(self.segmente) - 1)):
             if self.head.distance(self.segmente[num_piesa]) < 10:
-                print("Te-ai lovit!")
                 return False
 
     # Directiile
