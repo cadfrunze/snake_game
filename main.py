@@ -4,6 +4,8 @@ from snake import Snake
 from food import Food
 from score import Scoreboard
 
+
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.listen()
@@ -13,6 +15,7 @@ screen.tracer(0)
 snake_food = Food()
 sarpele = Snake()
 scorul = Scoreboard()
+
 
 screen.listen()
 screen.onkey(key='Up', fun=sarpele.move_up)
