@@ -1,5 +1,6 @@
 from turtle import Turtle
 from tkinter import Tk
+
 ARANJARE = "center"
 FONT = ('Arial', 14, 'normal')
 MOVE = False
@@ -14,7 +15,6 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.goto(x=0, y=280)
         self.update_score()
-
 
     def update_score(self):
         self.write(arg=f"Scor: {self.scor}", move=MOVE, align=ARANJARE, font=FONT)
@@ -31,9 +31,3 @@ class Scoreboard(Turtle):
     def game_over_muscat(self):
         self.goto(x=0, y=0)
         self.write(arg=f"Te-ai muscat de coada! Game over!", move=MOVE, align=ARANJARE, font=FONT)
-
-
-
-
-
-
